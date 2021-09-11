@@ -1,1 +1,16 @@
-"# whatsapi" 
+Whatsapp Gateway api Http Get or Traccar 
+
+--Traccar--
+
+<entry key='notificator.types'>web,sms</entry>
+<entry key='notificator.sms.manager.class'>org.traccar.sms.HttpSmsClient</entry>
+<entry key='sms.http.url'>http://localhost:8080/enviar?</entry>
+<entry key='sms.http.template'>
+{"destino": "{phone}","mensagem": "{message}", "token": "8s8d9s9fs991"}
+</entry>
+<entry key='status.timeout'>60</entry>
+
+
+--Web--
+
+http://localhost:8080/enviar?destino={phone}&mensagem={message}&token=8s8d9s9fs991
