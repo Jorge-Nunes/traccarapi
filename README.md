@@ -1,4 +1,7 @@
-Whatsapp Gateway api Http Get or Traccar 
+Whatsapp Gateway api Http Get or Traccar based on code Pedros Lopez Whatsapp.js
+
+npm install
+npm update
 
 --Traccar--
 
@@ -14,3 +17,23 @@ Whatsapp Gateway api Http Get or Traccar
 --Web--
 
 http://localhost:8080/enviar?destino={phone}&mensagem={message}&token=8s8d9s9fs991
+
+
+Linux No Sandbox 
+		args: ['--no-sandbox', '--disable-setuid-sandbox'],
+		
+Erro moduloraid
+
+const moduleRaid = function () {
+  moduleRaid.mID  = Math.random().toString(36).substring(7);
+  moduleRaid.mObj = {};
+
+  fillModuleArray = function() {
+    (window.webpackChunkbuild || window.webpackChunkwhatsapp_web_client).push([
+      [moduleRaid.mID], {}, function(e) {
+        Object.keys(e.m).forEach(function(mod) {
+          moduleRaid.mObj[mod] = e(mod);
+        })
+      }
+    ]);
+  }
