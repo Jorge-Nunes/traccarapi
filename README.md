@@ -1,9 +1,12 @@
-Whatsapp Gateway api Http Get or Traccar based on code Pedros Lopez Whatsapp.js
+*Whatsapp Gateway api Http Get or Traccar based on code Pedros Lopez Whatsapp.js* updated 13 Set
 
-npm install
-npm update
+1.  Git Clone https://github.com/gyulamester/traccarapi
+2.  npm install
+3.  npm update
+4.  node simple.js
 
---Traccar--
+
+**include in xml / Traccar**
 
 <entry key='notificator.types'>web,sms</entry>
 <entry key='notificator.sms.manager.class'>org.traccar.sms.HttpSmsClient</entry>
@@ -14,15 +17,23 @@ npm update
 <entry key='status.timeout'>60</entry>
 
 
---Web--
+**send via http get for other purposes / Web**
 
 http://localhost:8080/enviar?destino={phone}&mensagem={message}&token=8s8d9s9fs991
 
 
-Linux No Sandbox 
-		args: ['--no-sandbox', '--disable-setuid-sandbox'],
+**Support for possible fixes**
+
+*(Linux) error Sandbox / include in file ./node_modules/whatsapp-web.js/src/util/Constants.js* 
 		
-Erro moduloraid
+		exports.DefaultOptions = {
+    puppeteer: {
+        headless: true,
+		args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        defaultViewport: null
+    },
+		
+*Erro moduloraid ./node_modules/@pedroslopez/moduleraid/moduleraid.js* 
 
 const moduleRaid = function () {
   moduleRaid.mID  = Math.random().toString(36).substring(7);
@@ -37,3 +48,4 @@ const moduleRaid = function () {
       }
     ]);
   }
+  
