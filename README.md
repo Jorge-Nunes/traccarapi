@@ -1,4 +1,4 @@
-*Whatsapp Gateway api Http Get or Traccar based on code Pedros Lopez Whatsapp.js* updated 13 Set
+*Whatsapp Gateway api Http Get or Traccar based on code Pedros Lopez Whatsapp.js* updated 16 Set 21
 
 1.  Git Clone https://github.com/gyulamester/traccarapi
 2.  npm install
@@ -24,23 +24,28 @@ http://localhost:8080/enviar?destino={phone}&mensagem={message}&token=8s8d9s9fs9
 
 **Support for possible fixes**
 
+
 *(Linux) error Sandbox / include in file ./node_modules/whatsapp-web.js/src/util/Constants.js* 
-		
+//fail load//
+
+
 		exports.DefaultOptions = {
     puppeteer: {
         headless: true,
 		args: ['--no-sandbox', '--disable-setuid-sandbox'],
         defaultViewport: null
     },
+
 		
 *Erro moduloraid ./node_modules/@pedroslopez/moduleraid/moduleraid.js* 
+//UnhandledPromiseRejectionWarning: Error: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')//
 
 const moduleRaid = function () {
   moduleRaid.mID  = Math.random().toString(36).substring(7);
   moduleRaid.mObj = {};
 
   fillModuleArray = function() {
-    (window.webpackChunkbuild || window.webpackChunkwhatsapp_web_client).push([
+    webpackChunkwhatsapp_web_client.push([
       [moduleRaid.mID], {}, function(e) {
         Object.keys(e.m).forEach(function(mod) {
           moduleRaid.mObj[mod] = e(mod);
